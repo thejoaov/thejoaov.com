@@ -36,5 +36,4 @@ module.exports = {
 		phone: '+55 86 99975-6726',
 	},
 	foundingDate: '2018',
-	recaptcha_key: '6LdlXq4UAAAAAOMzkLcczfbqOXMzdlsNvOA4LYvL',
 }
