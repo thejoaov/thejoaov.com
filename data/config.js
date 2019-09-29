@@ -5,8 +5,6 @@ module.exports = {
 	author: 'João Victor',
 	url: 'https://thejoaov.com',
 	legalName: 'João Victor dos Santos',
-	shortDescription:
-		'Me chamo João Victor e desenvolvo aplicações em React, React-Native, e Node!',
 	defaultDescription:
 		'Desenvolvo aplicações principalmente em JavaScript, com foco em React, React-Native, e Node.JS. Também desenvolvo pequenas soluções em Python e Java!',
 	socialLinks: {

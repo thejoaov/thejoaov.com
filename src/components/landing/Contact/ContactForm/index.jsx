@@ -73,16 +73,13 @@ const ContactForm = ({
 		{values.success && (
 			<InputField>
 				<Center>
-					<h4>
-						Your message has been successfully sent, I will get back to you
-						ASAP!
-					</h4>
+					<h4>Sua mensagem foi enviada, entrarei em contato imediatamente!</h4>
 				</Center>
 			</InputField>
 		)}
 		<Center>
 			<Button secondary type="submit" disabled={isSubmitting}>
-				Submit
+				Enviar
 			</Button>
 		</Center>
 	</Form>
