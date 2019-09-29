@@ -4,9 +4,10 @@ import { Wrapper } from './styles'
 
 const NavbarLinks = ({ desktop }) => (
 	<Wrapper desktop={desktop}>
-		<AnchorLink href="#about">About</AnchorLink>
-		<AnchorLink href="#projects">Projects</AnchorLink>
-		<AnchorLink href="#contact">Contact</AnchorLink>
+		<AnchorLink href="#about">Sobre</AnchorLink>
+		<AnchorLink href="#projects">Projetos</AnchorLink>
+		<AnchorLink href="#contact">Contato</AnchorLink>
+		<a href="https://medium.com/@thejoaov">Blog</a>
 	</Wrapper>
 )
 

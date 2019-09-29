@@ -1,9 +1,10 @@
 import styled from 'styled-components'
+import config from '../../../../data/config'
 
 export const Input = styled.input`
 	width: 100%;
 	box-sizing: border-box;
-	border: 2px solid #6c63ff;
+	border: 2px solid ${config.themeColor};
 	padding: 0.8rem 1rem;
 	border-radius: 7px;
 	margin-bottom: 0.5rem;

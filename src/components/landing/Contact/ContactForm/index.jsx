@@ -27,7 +27,7 @@ const ContactForm = ({
 				name="name"
 				component="input"
 				aria-label="name"
-				placeholder="Full name*"
+				placeholder="Nome completo*"
 				error={touched.name && errors.name}
 			/>
 			<ErrorMessage component={Error} name="name" />
@@ -54,7 +54,7 @@ const ContactForm = ({
 				rows="8"
 				type="text"
 				name="message"
-				placeholder="Message*"
+				placeholder="Mensagem*"
 				error={touched.message && errors.message}
 			/>
 			<ErrorMessage component={Error} name="message" />
@@ -98,12 +98,16 @@ export default withFormik({
 	}),
 	validationSchema: () =>
 		Yup.object().shape({
-			name: Yup.string().required('Full name field is required'),
+			name: Yup.string().required('O nome completo é imprescindível.'),
 			email: Yup.string()
-				.email('Invalid email')
-				.required('Email field is required'),
-			message: Yup.string().required('Message field is required'),
-			recaptcha: Yup.string().required('Robots are not welcome yet!'),
+				.email('Email inválido')
+				.required('O email também é super necessário.'),
+			message: Yup.string().required(
+				'A mensagem então... é super imprescindível.'
+			),
+			recaptcha: Yup.string().required(
+				'Por enquanto robôs não são permitidos!'
+			),
 		}),
 	handleSubmit: async (
 		{ name, email, message, recaptcha },
@@ -134,7 +138,7 @@ export default withFormik({
 		} catch (err) {
 			setSubmitting(false)
 			setFieldValue('success', false)
-			alert('Something went wrong, please try again!') // eslint-disable-line
+			alert('Deu ruim, por favor tente novamente!') // eslint-disable-line
 		}
 	},
 })(ContactForm)

@@ -3,10 +3,11 @@ import { Link } from 'gatsby'
 import { Container } from 'Common'
 import NavbarLinks from '../NavbarLinks'
 import { Wrapper } from './styles'
+import config from '../../../../../data/config'
 
 const Navbar = () => (
 	<Wrapper as={Container}>
-		<Link to="/">John Doe</Link>
+		<Link to="/">{config.author}</Link>
 		<NavbarLinks desktop />
 	</Wrapper>
 )

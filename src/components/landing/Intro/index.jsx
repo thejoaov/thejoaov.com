@@ -3,6 +3,7 @@ import AnchorLink from 'react-anchor-link-smooth-scroll'
 import { Header } from 'Theme'
 import { Container, Button } from 'Common'
 import dev from 'Static/illustrations/dev.svg'
+import { defaultTitle, shortDescription } from 'Data'
 import { Wrapper, IntroWrapper, Details, Thumbnail } from './styles'
 
 export const Intro = () => (
@@ -10,14 +11,14 @@ export const Intro = () => (
 		<Header />
 		<IntroWrapper as={Container}>
 			<Details>
-				<h1>Hi There!</h1>
-				<h4>I’m John and I’m a Backend & Devops engineer!</h4>
+				<h1>{defaultTitle}</h1>
+				<h4>{shortDescription}</h4>
 				<Button as={AnchorLink} href="#contact">
-					Hire me
+					Fale comigo!
 				</Button>
 			</Details>
 			<Thumbnail>
-				<img src={dev} alt="I’m John and I’m a Backend & Devops engineer!" />
+				<img src={dev} alt={shortDescription} />
 			</Thumbnail>
 		</IntroWrapper>
 	</Wrapper>
