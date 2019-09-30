@@ -58,7 +58,7 @@ export const SEO = ({
 			<meta name="description" content={description} />
 			<meta name="image" content={Thumbnail} />
 
-			<meta property="og:url" content={`${url}${location}/?ref=smakosh.com`} />
+			<meta property="og:url" content={`${url}${location}/?ref=thejoaov.com`} />
 			<meta property="og:type" content="website" />
 			<meta property="og:title" content={title} />
 			<meta property="og:description" content={description} />
@@ -74,7 +74,7 @@ export const SEO = ({
 			<script type="application/ld+json">{structuredDataOrganization}</script>
 			<link rel="publisher" href={socialLinks.google} />
 			<title>{title}</title>
-			<html lang="en" dir="ltr" />
+			<html lang="pt-BR" dir="ltr" />
 		</Helmet>
 	)
 }
