@@ -7,14 +7,12 @@ import api from '../../../services/api'
 
 export function Projects() {
 	const [projects, setProjects] = useState([])
+	const [allProjects, setAllProjects] = useState([])
 
 	useEffect(() => {
 		async function loadProjects() {
-			const response = await api.get('/users/thejoaov/repos', {
-				params: {
-					page: 2,
-				},
-			})
+			const response = await api.get('/users/thejoaov/repos')
+			setAllProjects(response.data)
 			const shuffled = response.data
 				.map(a => ({ sort: Math.random(), value: a }))
 				.sort((a, b) => a.sort - b.sort)
@@ -27,7 +25,7 @@ export function Projects() {
 
 	return (
 		<Wrapper as={Container} id="projects">
-			<h2>Projects</h2>
+			<h2>Projetos do Github</h2>
 			<Grid>
 				{projects.slice(0, 9).map(project => (
 					<Item
