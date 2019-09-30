@@ -62,7 +62,7 @@ const ContactForm = ({
 			<InputField>
 				<FastField
 					component={Recaptcha}
-					sitekey={process.env.GATSBY_SITE_RECAPTCHA_KEY}
+					sitekey={process.env.SITE_RECAPTCHA_KEY}
 					name="recaptcha"
 					onChange={value => setFieldValue('recaptcha', value)}
 				/>

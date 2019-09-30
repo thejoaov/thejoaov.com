@@ -1,67 +1,55 @@
-import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
+import React, { useState, useEffect } from 'react'
 import { Container, Card } from 'Common'
 import starIcon from 'Static/icons/star.svg'
 import forkIcon from 'Static/icons/fork.svg'
 import { Wrapper, Grid, Item, Content, Stats } from './styles'
+import api from '../../../services/api'
 
-export const Projects = () => {
-	const {
-		github: {
-			repositoryOwner: {
-				repositories: { edges },
-			},
-		},
-	} = useStaticQuery(graphql`
-		{
-			github {
-				repositoryOwner(login: "thejoaov") {
-					repositories(
-						first: 8
-						orderBy: { field: STARGAZERS, direction: DESC }
-					) {
-						edges {
-							node {
-								id
-								name
-								url
-								description
-								stargazers {
-									totalCount
-								}
-								forkCount
-							}
-						}
-					}
-				}
-			}
+export function Projects() {
+	const [projects, setProjects] = useState([])
+
+	useEffect(() => {
+		async function loadProjects() {
+			const response = await api.get('/users/thejoaov/repos', {
+				params: {
+					page: 2,
+				},
+			})
+			const shuffled = response.data
+				.map(a => ({ sort: Math.random(), value: a }))
+				.sort((a, b) => a.sort - b.sort)
+				.map(a => a.value)
+			setProjects(shuffled)
+			console.log(shuffled)
 		}
-	`)
+		loadProjects()
+	}, [])
+
 	return (
 		<Wrapper as={Container} id="projects">
-			<h2>Projetos</h2>
+			<h2>Projects</h2>
 			<Grid>
-				{edges.map(({ node }) => (
+				{projects.slice(0, 9).map(project => (
 					<Item
-						key={node.id}
+						key={project.id}
 						as="a"
-						href={node.url}
+						href={project.url}
 						target="_blank"
 						rel="noopener noreferrer"
 					>
 						<Card>
 							<Content>
-								<h4>{node.name}</h4>
-								<p>{node.description}</p>
+								<h4>{project.name}</h4>
+								<p>{project.description}</p>
 							</Content>
 							<Stats>
 								<div>
 									<img src={starIcon} alt="stars" />
-									<span>{node.stargazers.totalCount}</span>
+									<span>{project.stargazers_count}</span>
 								</div>
 								<div>
 									<img src={forkIcon} alt="forks" />
-									<span>{node.forkCount}</span>
+									<span>{project.forks_count}</span>
 								</div>
 							</Stats>
 						</Card>
