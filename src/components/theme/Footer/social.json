@@ -1,26 +1,26 @@
 [
-  {
-    "id": 0,
-    "name": "Telegram",
-    "link": "https://t.me/thejoaov",
-    "icon": "/icons/telegram.svg"
-  },
-  {
-    "id": 1,
-    "name": "Github",
-    "link": "https://github.com/thejoaov",
-    "icon": "/icons/github.svg"
-  },
-  {
-    "id": 2,
-    "name": "StackOverflow",
-    "link": "https://stackoverflow.com/users/story/11638833",
-    "icon": "/icons/stackoverflow.svg"
-  },
-  {
-    "id": 3,
-    "name": "Twitter",
-    "link": "https://twitter.com/thejoaov",
-    "icon": "/icons/twitter.svg"
-  }
+	{
+		"id": 0,
+		"name": "Telegram",
+		"link": "https://t.me/thejoaov",
+		"icon": "/icons/telegram.svg"
+	},
+	{
+		"id": 1,
+		"name": "Github",
+		"link": "https://github.com/thejoaov",
+		"icon": "/icons/github.svg"
+	},
+	{
+		"id": 2,
+		"name": "StackOverflow",
+		"link": "https://stackoverflow.com/story/thejoaov",
+		"icon": "/icons/stackoverflow.svg"
+	},
+	{
+		"id": 3,
+		"name": "Twitter",
+		"link": "https://twitter.com/thejoaov",
+		"icon": "/icons/twitter.svg"
+	}
 ]
