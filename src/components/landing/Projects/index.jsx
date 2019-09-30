@@ -18,13 +18,13 @@ export function Projects() {
 
 	return (
 		<Wrapper as={Container} id="projects">
-			<h2>Projetos do Github ({projects.lenght})</h2>
+			<h2>Projetos do Github ({projects.length})</h2>
 			<Grid>
 				{projects.slice(0, 12).map(project => (
 					<Item
 						key={project.id}
 						as="a"
-						href={project.url}
+						href={project.svn_url}
 						target="_blank"
 						rel="noopener noreferrer"
 					>
