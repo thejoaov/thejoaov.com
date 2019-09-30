@@ -46,4 +46,7 @@ export const Details = styled.div`
 	@media (max-width: 680px) {
 		margin-bottom: 2rem;
 	}
+	span {
+		font-size: 11px;
+	}
 `
