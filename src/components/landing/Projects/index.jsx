@@ -11,7 +11,7 @@ export function Projects() {
 
 	useEffect(() => {
 		async function loadProjects() {
-			const response = await api.get('/users/thejoaov/repos')
+			const response = await api.get('/users/thejoaov/repos?per_page=200&page=1')
 			setAllProjects(response.data)
 			const shuffled = response.data
 				.map(a => ({ sort: Math.random(), value: a }))
