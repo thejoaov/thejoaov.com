@@ -12,6 +12,7 @@ export const Wrapper = styled.div`
 	height: 100%;
 	a {
 		color: #212121;
+		transition: all 0.3s;
 		&:hover {
 			color: ${themeColor};
 		}

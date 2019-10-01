@@ -25,6 +25,7 @@
 		"gatsby-source-filesystem": "^2.0.8",
 		"gatsby-source-graphql": "^2.0.19",
 		"gatsby-transformer-sharp": "^2.1.8",
+		"polished": "^3.4.1",
 		"prop-types": "^15.6.2",
 		"react": "^16.8.6",
 		"react-anchor-link-smooth-scroll": "^1.0.11",

@@ -1,4 +1,6 @@
 import styled from 'styled-components'
+import { darken } from 'polished'
+import { themeColor } from '../../../../data/config'
 
 export const Button = styled.button`
 	cursor: pointer;
@@ -13,10 +15,15 @@ export const Button = styled.button`
 	-ms-user-select: none;
 	user-select: none;
 	color: #fff;
-	background: #0074d9;
+	background: ${themeColor};
+	transition: all 0.3s;
 
 	&:focus {
 		outline: none;
+	}
+
+	&:hover {
+		background: ${darken('0.05', themeColor)};
 	}
 
 	&:disabled {
