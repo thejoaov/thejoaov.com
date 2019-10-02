@@ -5,4 +5,4 @@
 ## Baseado no Tema:
 [Gatsby-theme-portfolio](https://github.com/smakosh/gatsby-theme-portfolio)
 
-Site pessoal criado utilizando Gatsby, React e styled-components.
+Site pessoal criado utilizando Gatsby, ReactJS(hooks) e styled-components.
